@@ -56,11 +56,11 @@ def extract_information(soup):
 # Main execution flow
 base_url = "http://app.hama-univ.edu.sy/StdMark/Student/"
 college_id = "?college=1"
-base_id = "8190"
+base_id = "81902"
 
 # Iterate over all possible combinations for 'xxxx' (0000 to 9999)
-for i in range(30000):
-    student_id = f"{base_id}{i:05d}"  # Generate student ID with leading zeros
+for i in range(10000):
+    student_id = f"{base_id}{i04d}"  # Generate student ID with leading zeros
     url = f"{base_url}{student_id}{college_id}"
     logging.info(f"Checking URL: {url}")
     
