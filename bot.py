@@ -59,7 +59,7 @@ college_id = "?college=1"
 base_id = "81906"
 
 # Iterate over all possible combinations for 'xxxx' (0000 to 9999)
-for i in range(10000):
+for i in range(6570, 10000):
     student_id = f"{base_id}{i:04d}"  # Generate student ID with leading zeros
     url = f"{base_url}{student_id}{college_id}"
     logging.info(f"Checking URL: {url}")
