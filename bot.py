@@ -56,7 +56,7 @@ def extract_information(soup):
 # Main execution flow
 base_url = "http://app.hama-univ.edu.sy/StdMark/Student/"
 college_id = "?college=1"
-base_id = "81908"
+base_id = "81906"
 
 # Iterate over all possible combinations for 'xxxx' (0000 to 9999)
 for i in range(10000):
